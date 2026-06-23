@@ -7,7 +7,7 @@ import { useCheckCategory } from '~/modules/erkhet-sync/check-category/hooks/use
 import CheckButton from '~/modules/erkhet-sync/check-category/components/useCheckButton';
 
 export const CheckCategoryPage = () => {
-  const { loading, toCheckCategories, setSelectedFilter } = useCheckCategory();
+  const { setSelectedFilter } = useCheckCategory();
 
   const handleFilterClick = (filter: 'create' | 'update' | 'delete') => {
     setSelectedFilter(filter);
@@ -21,13 +21,7 @@ export const CheckCategoryPage = () => {
         <CheckButton />
       </PageSubHeader>
 
-      {toCheckCategories && toCheckCategories.length > 0 ? (
-        <CheckCategoryRecordTable />
-      ) : (
-        <div className="m-3 text-center text-muted-foreground">
-          {loading ? 'Checking...' : 'No data found'}
-        </div>
-      )}
+      <CheckCategoryRecordTable />
     </PageContainer>
   );
 };

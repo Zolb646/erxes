@@ -154,7 +154,7 @@ const DefaultFilterConfig: React.FC<Props> = ({
         </div>
 
         {filters.length === 0 ? (
-          <div className="bg-white rounded-xl border p-10 text-center text-muted-foreground shadow-sm">
+          <div className="rounded-xl border p-10 text-center text-muted-foreground shadow-sm">
             No filter configurations. Click "Add Filter" to create one.
           </div>
         ) : (
@@ -162,7 +162,7 @@ const DefaultFilterConfig: React.FC<Props> = ({
             {filters.map((filter, index) => (
               <div
                 key={filter.title}
-                className="bg-white rounded-xl border p-6 shadow-sm space-y-6"
+                className="rounded-xl border p-6 space-y-6"
               >
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-base">{filter.title}</h3>
